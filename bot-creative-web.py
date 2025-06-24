@@ -24,8 +24,9 @@ def send_message(text):
 def get_current_eth_price():
     resp = requests.get(ETH_API_URL)
     resp.raise_for_status()
-    price = float(resp.json()["price"])
+    price = resp.json()['ethereum']['usd']
     return price
+
 
 
 def load_previous_price():

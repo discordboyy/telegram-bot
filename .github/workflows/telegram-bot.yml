@@ -1,9 +1,9 @@
 name: Telegram Bot Scheduler
 
 on:
+  workflow_dispatch:   # manual trigger from GitHub UI
   schedule:
-    # Runs every 5 minutes - change as needed
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'  # runs every 5 minutes
 
 jobs:
   send-message:
